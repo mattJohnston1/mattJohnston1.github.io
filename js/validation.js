@@ -28,8 +28,8 @@ $(document).ready(function() {
         0 == b && ($("#send_message").attr({
             disabled: "true",
             value: "Sending..."
-        }), $.post("email.php", $("#contact_form").serialize(), function(a) {
-            console.log("SUBMITTED" , a)
+        }), $.post("https://mattjohnston1.github.io/email.php", $("#contact_form").serialize(), function(a) {
+            console.log("SUBMITTED svsdvvsdsdvsdvsdvdsvsdvsdvsvdsvsvddsv" , a)
             "sent" == a 
             ? 
                 ($("#submit").remove(), $("#mail_success").fadeIn(500)) 
