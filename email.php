@@ -1,6 +1,9 @@
 <?php 
+error_reporting(-1);
+ini_set('display_errors', 'On');
+set_error_handler("var_dump");
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST');
+header('Access-Control-Allow-Methods: POST');
 header("Access-Control-Allow-Headers: X-Requested-With");
 $name = $_POST['name'];
 $email = $_POST['email'];

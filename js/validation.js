@@ -25,12 +25,13 @@ $(document).ready(function() {
             var b = !0;
             $("#message").addClass("error_input")
         } else $("#message").removeClass("error_input");
+        // console.log("HERE", $("#contact_form").serialize())
         0 == b && ($("#send_message").attr({
             disabled: "true",
             value: "Sending..."
-        }), $.post("email.php", $("#contact_form").serialize(), function(a) {
-        // }), $.post("email.php", $("#contact_form").serialize(), function(a) {
-            console.log("SUBMITTED svsdvvsdsdvsdvsdvdsvsdvsdvsvdsvsvddsv" , a)
+        // }), $.post("https://mattjohnston1.github.io/email.php", $("#contact_form").serialize(), function(a) {
+        }), $.post("http://localhost:8000", $("#contact_form").serialize(), function(a) {
+            console.log("SUBMITTED" , a)
             "sent" == a 
             ? 
                 ($("#submit").remove(), $("#mail_success").fadeIn(500)) 
